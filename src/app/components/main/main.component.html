@@ -1,0 +1,39 @@
+<h2 class="header">Товары на складе</h2>
+<div class="table">
+    <table>
+        <thead>
+            <tr class="products-info">
+                @for (tableHeader of tableHeaders; track $index) {
+                    <th class="info-item brand">
+                        <div class="table-block-header table-block-header--shadow">
+                            <span>{{ tableHeader }}</span>
+                            <i class="ri-search-line" (click)="toggleFilter($index)"></i>
+                            @if (isInputOpen[$index]) {
+                                <app-input-filter class="input-filter brand-input" id="brand-search" (setFilter)="applyFilter($index)" (searchInfo!)="filterInput"></app-input-filter>
+                            }
+                        </div>
+                    </th>
+                }
+                <th class="info-item in-stock">
+                    <div class="table-block-header">
+                        <span>Наличие</span>
+                        <i class="ri-filter-line"></i>
+                    </div>
+                </th>
+            </tr>
+            @for (product of productsList; track $index) {
+                <tr class="product">
+                    <td class="product-brand">{{ product.brand }}</td>
+                    <td>{{ product.article }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.price }}</td>
+                    @if (product.in_stock == true) {
+                        <td class="has">В наличии</td>
+                    } @else if (product.in_stock == false) {
+                        <td>Нет в наличии</td>
+                    }
+                </tr>
+            }
+        </thead>
+    </table>
+</div>

@@ -1,0 +1,99 @@
+@import 'remixicon/fonts/remixicon.css';
+table {
+    width: 100%;
+
+    .products-info {
+        overflow: scroll;
+
+        .info-item {
+            
+            .table-block-header {
+                position: relative;
+                background: #F3F3F3;
+                text-align: left;
+                color: #808080;
+                padding: 20px;
+                font-size: 12px;
+                font-weight: thin;
+                height: 100%;
+            }
+          
+            span {
+              font-size: 12px;
+              font-weight: 600;
+              color: rgba(128, 128, 128, 1);
+            }
+
+            
+            i {
+                position: absolute;
+                right: 15px;
+                cursor: pointer;
+            }
+        }
+
+        
+    }
+    .product {
+        
+        td {
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .has {
+            color: #00A0E3;
+        }
+    }
+
+    th,
+    td {
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 30;
+        box-shadow: 12px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 20;
+        box-shadow: 12px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    th:first-child {
+        min-width: 212px;
+    }
+    th:nth-child(2) {
+        min-width: 280px;
+    }
+    
+    th:nth-child(3) {
+        min-width: 568px;
+    }
+    th:nth-child(4) {
+        min-width: 270px;
+    }
+    
+    th:nth-child(5) {
+        min-width: 270px;
+    }
+
+    .table-block-header {
+        position: relative;
+    }
+
+    .product-brand {
+        box-shadow: 12px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+}
+
+h2 {
+    font-size: 20px;
+    padding: 5px;
+}

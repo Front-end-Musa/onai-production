@@ -1,0 +1,53 @@
+.wrapper {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    box-shadow: 12px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+    .search-input {
+        width: 100%;
+        padding: 15px 10px;
+        font-size: 14px;
+        border: .5px solid #00A0E3;
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+    
+    .search-input::-webkit-search-cancel-button {
+        appearance: none;
+        -webkit-appearance: none;
+        height: 10px;
+        width: 10px;
+        background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Black_close_x.svg/1200px-Black_close_x.svg.png') no-repeat center;
+        cursor: pointer;
+    }
+    
+    .buttons {
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: row;
+
+        .ok {
+            width: 36px;
+            height: 30px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 400;
+            background-color: #00A0E3;
+            color: #fff;
+        }
+
+        .cancel {
+            background: none;
+            border: .5px solid red;
+            border-radius: 4px;
+            color: red;
+        }
+    }
+}
